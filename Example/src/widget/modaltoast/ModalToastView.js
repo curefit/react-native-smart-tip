@@ -10,7 +10,10 @@ import {
 import {ToastInOutDuration, ToastInHeight} from '../data/Constants'
 
 const MaxWidthRatio = 0.8
+let subscription;
+
 export default class ModalToastView extends Component{
+
 
     constructor(props) {
         super(props)
@@ -25,7 +28,7 @@ export default class ModalToastView extends Component{
         }
 
         // React after 17
-        Dimensions.addEventListener('change', this.onWindowChange);
+        subscription = Dimensions.addEventListener('change', this.onWindowChange);
     }
 
     componentDidMount() {
@@ -37,7 +40,7 @@ export default class ModalToastView extends Component{
             this.liftCycleAnimated.stop()
             this.liftCycleAnimated = undefined
         }
-        Dimensions.removeEventListener('change', this.onWindowChange);
+        subscription.remove();
     }
 
     render() {
