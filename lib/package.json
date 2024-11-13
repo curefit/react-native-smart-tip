@@ -2,13 +2,9 @@
   "name": "react-native-smart-tip",
   "version": "2.3.0",
   "description": "react-native smart tip, including Toast、Modal、SnackBar",
-  "main": "lib/index.ts",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mochixuan/react-native-smart-tip"
   },
   "types": "./index.d.ts",
   "keywords": [
