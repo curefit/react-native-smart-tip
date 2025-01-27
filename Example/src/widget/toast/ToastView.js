@@ -10,7 +10,6 @@ import {ToastInOutDuration, ToastInHeight} from '../data/Constants'
 import { shadowBlackStyleBottom } from '../util/UiUtil'
 
 const MaxWidthRatio = 0.8
-let subscription;
 export default class ToastView extends Component{
 
     constructor(props) {
@@ -36,7 +35,6 @@ export default class ToastView extends Component{
             this.liftCycleAnimated.stop()
             this.liftCycleAnimated = undefined
         }
-        subscription.remove();
     }
 
     render() {
