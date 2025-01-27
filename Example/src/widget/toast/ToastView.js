@@ -25,8 +25,6 @@ export default class ToastView extends Component{
             animatedValue2: new Animated.Value(0.2),
         }
 
-        // React after 17
-      subscription = Dimensions.addEventListener('change', this.onWindowChange);
     }
 
     componentDidMount() {
